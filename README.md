@@ -1,2 +1,2 @@
 # Translation-Application_ES
-English to Spanish Translation Application
+Python-based English to Spanish Translation Application. 
