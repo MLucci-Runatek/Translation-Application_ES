@@ -16,13 +16,13 @@ if (tense in Tenses) == False:
 else:
 #User inputs the subject
     print("Who are you talking about?")
-    print("Example: Me, You, Him, Her, They, Us")
+    print("Example: Me, You, Him, Her, Them, Us")
     print("For formal conversation, input 'Him'")
     subject = input()
 
 #Checks to make sure that the subject is in the subject set
-Subjects = ["Me", "You", "Him", "Her", "They", "Us", "me", "you", "him", "her", "they", "us", \
-            "ME", "YOU", "HIM", "HER", "THEY", "US"]
+Subjects = ["Me", "You", "Him", "Her", "Them", "Us", "me", "you", "him", "her", "them", "us", \
+            "ME", "YOU", "HIM", "HER", "THEM", "US"]
 if (subject in Subjects) == False:
     print("INVALID SUBJECT INPUT")
 else:
@@ -38,4 +38,63 @@ else:
 verbLength = len(verb)
 newLength = verbLength - 2
 baseVerb = verb[0:newLength]
-print(baseVerb)
+#print(baseVerb)
+
+
+#Each case is going to have to be spelled out:
+if ("ir" in verb or "IR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "me" or subject == "Me" or subject == "ME"):
+    ending = "o"
+elif ("er" in verb or "ER" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "me" or subject == "Me" or subject == "ME"):
+    ending = "o"
+elif ("ar" in verb or "AR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "me" or subject == "Me" or subject == "ME"):
+    ending = "o"
+elif ("ir" in verb or "IR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "you" or subject == "You" or subject == "YOU"):
+    ending = "es"
+elif ("er" in verb or "ER" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "you" or subject == "You" or subject == "YOU"):
+    ending = "es"
+elif ("ar" in verb or "AR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "you" or subject == "You" or subject == "YOU"):
+    ending = "as"
+elif ("ir" in verb or "IR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "him" or subject == "Him" or subject == "HIM" or subject == "her" or subject == "Her" \
+        or subject == "HER"):
+    ending = "e"
+elif ("er" in verb or "ER" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "him" or subject == "Him" or subject == "HIM" or subject == "her" or subject == "Her" \
+        or subject == "HER"):
+    ending = "e"
+elif ("ar" in verb or "AR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "him" or subject == "Him" or subject == "HIM" or subject == "her" or subject == "Her" \
+        or subject == "HER"):
+    ending = "a"
+elif ("ir" in verb or "IR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "them" or subject == "Them" or subject == "THEM"):
+    ending = "en"
+elif ("er" in verb or "ER" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "them" or subject == "Them" or subject == "THEM"):
+    ending = "en"
+elif ("ar" in verb or "AR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "them" or subject == "Them" or subject == "THEM"):
+    ending = "an"
+elif ("ir" in verb or "IR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "us" or subject == "Us" or subject == "US"):
+    ending = "imos"
+elif ("er" in verb or "ER" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "us" or subject == "Us" or subject == "US"):
+    ending = "emos"
+elif ("ar" in verb or "AR" in verb) and (tense == "present" or tense == "Present" or tense == "PRESENT") \
+        and (subject == "us" or subject == "Us" or subject == "US"):
+    ending = "amos"
+else:
+    ending = "XX"
+
+#Will need to complete this for every combination and every tense
+
+#replaces the verb ending with the conjugated ending and prints the conjugated verb
+conjugatedVerb = baseVerb + ending
+print("Conjugated Verb:",conjugatedVerb)
