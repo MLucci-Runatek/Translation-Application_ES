@@ -1,7 +1,7 @@
 #This portion of the code is meant to conjugate regular verbs in Spanish
 
 #Takes user input for the verb
-print("Input Spanish Verb")
+print("Input Regular Spanish Verb")
 verb = input()
 
 #Takes user input for the tense
@@ -30,3 +30,12 @@ else:
     #Here is where we need to conjugate.
     #We need to remove the IR, ER, or AR from the verb.
     #We need to replace the ending with the new ending, depending on the tense.
+    #This can be done with a long set of if/elif statements
+
+#Need to imbed if/else statements, so that the code stops if there's an invalid input.
+
+#Removes the verb ending
+verbLength = len(verb)
+newLength = verbLength - 2
+baseVerb = verb[0:newLength]
+print(baseVerb)
