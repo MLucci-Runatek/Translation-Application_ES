@@ -1,0 +1,27 @@
+#This portion of the code is meant to conjugate regular verbs in Spanish
+
+#Takes user input for the verb
+print("Input Spanish Verb")
+verb = input()
+
+#Takes user input for the tense
+print("Input tense (past, present, or future)")
+tense = input()
+
+#checks if tense is in Tenses
+Tenses = ["past", "present", "future", "Past", "Present", "Future", "PAST", "PRESENT", "FUTURE"]
+#tenseCheck = bool(tense in Tenses)
+if (tense in Tenses) == False:
+    print("INVALID TENSE INPUT")
+else:
+#User inputs the subject
+    print("Who are you talking about?")
+    print("Example: Me, You, Him, Her, They, Us")
+    print("For formal conversation, input 'Him'")
+    subject = input()
+
+#Checks to make sure that the subject is in the subject set
+Subjects = ["Me", "You", "Him", "Her", "They", "Us", "me", "you", "him", "her", "they", "us", \
+            "ME", "YOU", "HIM", "HER", "THEY", "US"]
+if (subject in Subjects) == False:
+    print("INVALID SUBJECT INPUT")
