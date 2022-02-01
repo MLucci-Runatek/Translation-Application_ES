@@ -25,3 +25,8 @@ Subjects = ["Me", "You", "Him", "Her", "They", "Us", "me", "you", "him", "her", 
             "ME", "YOU", "HIM", "HER", "THEY", "US"]
 if (subject in Subjects) == False:
     print("INVALID SUBJECT INPUT")
+else:
+    print("conjugating...")
+    #Here is where we need to conjugate.
+    #We need to remove the IR, ER, or AR from the verb.
+    #We need to replace the ending with the new ending, depending on the tense.
