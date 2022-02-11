@@ -98,3 +98,6 @@ else:
 #replaces the verb ending with the conjugated ending and prints the conjugated verb
 conjugatedVerb = baseVerb + ending
 print("Conjugated Verb:",conjugatedVerb)
+
+
+#Write Irregular verbs in a set that can be referenced
